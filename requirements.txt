@@ -1,0 +1,8 @@
+Django>=4.2
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+numpy>=1.21
+PyYAML>=6.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+django-rest-framework>=0.1.0 

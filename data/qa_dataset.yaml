@@ -1,0 +1,514 @@
+- department: "HR"
+  questions:
+    - "Are parents included in the insurance policy?"
+    - "Is parental coverage part of the company insurance?"
+    - "Does the health insurance include my parents?"
+    - "Can I add my parents to the existing insurance policy?"
+    - "Are parents covered under the group medical insurance plan?"
+  answer: |
+    No, The current Group Insurance Policy does not include coverage for parents. However, an Optional Parental Insurance Policy is available. To opt for this policy, please contact your respective State HR representative.
+
+- department: "HR"
+  questions:
+    - "How do I download my medical card?"
+    - "Where can I get my health insurance card?"
+    - "How can I access or download my medical insurance card?"
+    - "Is there a way to get my medical card online?"
+    - "From where do I download my health card?"
+  answer: |
+    Log in to the Activ Health App. Your card will be available under the “Download Medical Card” section.
+
+- department: "HR"
+  questions:
+    - "What does my insurance policy cover?"
+    - "What are the inclusions under my current insurance plan?"
+    - "What benefits are offered in the group insurance policy?"
+    - "What medical expenses are covered by our insurance policy?"
+    - "Can you share the details of what's covered in my health insurance?"
+    - "What included in health plan?"
+    - "what facilities in health plan?"
+    - "What expenses insurance pay?"
+  answer: |
+    The group insurance policy typically covers hospitalization, surgeries, and maternity expenses. For detailed information on coverage, please refer to the policy document or contact the HR department.
+
+- department: "HR"
+  questions:
+    - "How do I file an insurance claim?"
+    - "What is the process for submitting an insurance claim?"
+    - "How can I initiate a claim under my health insurance?"
+    - "What steps should I take to file a medical claim?"
+    - "What’s the correct way to raise an insurance claim request?"
+  answer: |
+    For cashless claims:
+      Visit a network hospital and fill out the pre-authorization form.
+    For reimbursement claims:
+      Submit the following original documents to the TPA or insurer within the required timeframe:
+      1. Hospital bills
+      2. Discharge summary
+      3. ID proof
+      4. Any other relevant medical documents
+
+- department: "HR"
+  questions:
+    - "cashless claim"
+    - "cashless claim related issue"
+  answer: |
+    For cashless claims:
+      Visit a network hospital and fill out the pre-authorization form.
+
+- department: "HR"
+  questions:
+    - "reimbursement claim"
+    - "reimbursement claim related issue"
+  answer: |
+    For reimbursement claims:
+      Submit the following original documents to the TPA or insurer within the required timeframe:
+      1. Hospital bills
+      2. Discharge summary
+      3. ID proof
+      4. Any other relevant medical documents
+
+- department: "HR"
+  questions:
+    - "What documents are required for an insurance claim?"
+    - "What paperwork is needed to process an insurance claim?"
+    - "Which documents do I need to submit for a medical reimbursement?"
+    - "Can you list the required documents for filing a health insurance claim?"
+    - "which documents required for insurance claim?"
+    - "What are the necessary documents for a successful insurance claim?"
+  answer: |
+    Documents required for an insurance claim:
+      1. Duly filled claim form
+      2. Discharge summary
+      3. Final hospital bill
+      4. Prescriptions and diagnostic reports
+      5. ID proof
+      6. Bank details (applicable for reimbursement claims)
+
+- department: "HR"
+  questions:
+    - "Who is the TPA/contact for insurance?"
+    - "Whom should I contact regarding my insurance queries?"
+    - "Who is the insurance point of contact or TPA?"
+    - "Who handles insurance-related support or claims?"
+    - "contact person for insurance related issues"
+    - "contact person for insurance issues"
+    - "POC for insurance related issues"
+    - "POC for insurance issues"
+  answer: |
+    Contact Person: Deepak Kudave
+    Phone Number: 9834716953
+
+- department: "HR"
+  questions:
+    - "Which hospitals are part of the cashless insurance network?"
+    - "How can I find hospitals that support cashless treatment under our insurance?"
+    - "Where can I check the list of empanelled hospitals for cashless claims?"
+    - "Which hospitals accept our company’s insurance for cashless services?"
+    - "Are there specific hospitals included in the cashless network of our policy?"
+    - "which hospitals in insurance network?"
+    - "which hospital in insurance?"
+  answer: |
+    You can view the list of empanelled hospitals on the Activ Health App.
+
+- department: "HR"
+  questions:
+    - "Can I add family members to my insurance policy?"
+    - "Is it possible to include my spouse or children in the insurance policy?"
+    - "How do I add dependents to my medical insurance plan?"
+    - "Am I allowed to enroll family members under the group insurance?"
+    - "Can I opt for family coverage in my current insurance policy?"
+  answer: |
+    Spouse and children can be included in the policy, subject to the applicable policy terms. For additions, please contact HR during the enrollment window.
+
+- department: "HR"
+  questions:
+    - "What is the claim limit under my insurance policy?"
+    - "How much coverage does my insurance policy provide?"
+    - "What is the maximum amount I can claim under my current insurance plan?"
+    - "What is the sum insured in my policy?"
+    - "Where can I check the claim limit for my insurance coverage?"
+  answer: |
+    The sum insured is specified in your policy. For specific coverage limits, please refer to your e-card or contact HR.
+
+- department: "HR"
+  questions:
+    - "How do I apply for an ESI card?"
+    - "What is the process to get my ESI card?"
+    - "How can I obtain my ESI card after joining?"
+    - "Where can I download my ESI card from?"
+    - "When and how will I receive my ESI card?"
+  answer: |
+    If you are eligible for ESI, your ESI number will be shared by HR after your joining. You can download the ESI card from the ESIC portal using your login credentials.
+
+- department: "HR"
+  questions:
+    - "How do I submit a travel reimbursement?"
+    - "What is the process to claim travel reimbursement?"
+    - "How can I apply for reimbursement of my travel expenses?"
+    - "Where should I send my travel bills for reimbursement?"
+    - "Whom do I contact to submit my travel reimbursement request?"
+  answer: |
+    Submit your reimbursement claim sheet, manager’s approval, and supporting bills via email to the finance team.
+
+- department: "HR"
+  questions:
+    - "What is the reimbursement rate per km for travel expenses?"
+    - "What rate do I get per kilometer for travel reimbursement?"
+    - "How much do we receive per km for travel claims?"
+    - "What’s the per‑kilometer reimbursement for two‑wheelers and four‑wheelers?"
+    - "Can you tell me the travel expense rate per km?"
+  answer: |
+    The reimbursement rate is ₹9 per kilometer for four-wheelers and ₹4 per kilometer for two-wheelers.
+
+- department: "HR"
+  questions:
+    - "How do I punch in and out for attendance?"
+    - "What is the process to mark my attendance?"
+    - "How can I clock in and out at work?"
+    - "Which platform should I use to register my attendance?"
+    - "How do I record my check-in and check-out times?"
+  answer: |
+    Use the Zing HR app or web portal to access the required services.
+
+- department: "HR"
+  questions:
+    - "Can I punch in outside the office?"
+    - "Is it allowed to mark attendance remotely?"
+    - "Am I permitted to punch in when I’m not at the office location?"
+    - "Can I log my attendance from a different location?"
+    - "Is remote or off-site punching enabled in the system?"
+  answer: |
+    Yes, location-based punching is allowed as long as geo-tagging is active. However, remote punches made after 9:30 AM may be marked as late.
+
+- department: "HR"
+  questions:
+    - "What happens if I punch in after 9:30 AM? Is it considered a late mark?"
+    - "Will I get a late mark if I log in after 9:30 AM?"
+    - "Is punching in post 9:30 AM treated as late attendance?"
+    - "What is the consequence of marking attendance after 9:30 AM?"
+    - "Does the system flag attendance as late if I punch in after 9:30 AM?"
+  answer: |
+    Yes, punching in after 9:30 AM is considered a late mark unless it is regularized.
+
+- department: "HR"
+  questions:
+    - "What does the red mark on my calendar in Zing HR mean?"
+    - "What does a red indicator on Zing HR calendar signify?"
+    - "Why is there a red mark showing on my Zing HR attendance calendar?"
+    - "What does it mean if a date is highlighted in red on Zing HR?"
+    - "Can you explain the red marking on my Zing HR calendar?"
+    - "red mark issue"
+    - "red mark related issue"
+  answer: |
+    It usually indicates a late punch or missing attendance. You can regularize this in  Zing.
+
+- department: "HR"
+  questions:
+    - "Are late marks in Zing paid or unpaid?"
+    - "Do late punches in Zing HR affect my pay?"
+    - "If I have a late mark in Zing, is it paid or unpaid?"
+    - "Are late attendance entries considered paid leave or unpaid?"
+    - "Does getting a late mark in the system result in a loss of pay?"
+    - "late mark issue"
+    - "late mark related issue"
+  answer: |
+    Unregularized late marks may result in Loss of Pay (LOP). Ensure that all late marks are regularized promptly.
+
+- department: "HR"
+  questions:
+    - "Can I regularize attendance for more than one day?"
+    - "Am I allowed to regularize attendance for multiple days at once?"
+    - "Can I submit a bulk attendance regularization request?"
+    - "Is it possible to regularize more than one day’s attendance?"
+    - "How do I regularize attendance for several days together?"
+  answer: |
+    Yes, you can regularize multiple days at once through the Zing HR portal.
+
+- department: "HR"
+  questions:
+    - "How many backdated days can I regularize?"
+    - "What’s the limit for backdated attendance regularization?"
+    - "Till how many past days can I apply for regularization?"
+    - "Is there a deadline for applying attendance regularization retroactively?"
+    - "How far back can I correct or regularize my attendance?"
+  answer: |
+    You can regularize attendance for up to 15 days in the past. The window to regularize an absence remains open for 15 days from the date of occurrence.
+
+- department: "HR"
+  questions:
+    - "How do I download my payslip?"
+    - "Where can I access my monthly payslip?"
+    - "What is the process to get my salary slip?"
+    - "How can I download or view my payslip online?"
+    - "From which portal do I get my salary slip?"
+  answer: |
+    Log in to Zing HR → Navigate to Payroll → Select Payslip → Choose the desired month → Click Download.
+
+- department: "HR"
+  questions:
+    - "What is the payroll cut-off date?"
+    - "When does the payroll cycle close each month?"
+    - "What’s the last date for submitting inputs for payroll?"
+    - "When is the cut-off date for salary processing?"
+    - "By when should attendance and claims be finalized for payroll?"
+  answer: |
+    The payroll cut-off date is the 25th of each month. Please ensure all necessary changes are submitted before this date.
+
+- department: "HR"
+  questions:
+    - "What is the process for LOP reversal?"
+    - "How can I request a loss of pay (LOP) reversal?"
+    - "What steps do I follow to reverse an LOP entry?"
+    - "Is there a way to reverse wrongly marked LOPs?"
+    - "What’s the procedure for correcting an LOP deduction?"
+  answer: |
+    Submit your attendance or leave regularization request in Zing HR. Once it is approved by your manager, HR will initiate the reversal process.
+
+- department: "HR"
+  questions:
+    - "Which bank is used for the company salary account?"
+    - "What is the salary disbursement bank for our company?"
+    - "Which bank processes our monthly salary?"
+    - "Where is my salary account maintained?"
+    - "Through which bank is salary credited?"
+  answer: |
+    Currently, salaries are credited to employees' personal bank accounts. However, going forward, they will be credited to the company-tied bank account. For further details, please contact HR.
+
+- department: "HR"
+  questions:
+    - "When is salary credited?"
+    - "On what date is the salary usually paid?"
+    - "When does the company process monthly salaries?"
+    - "What is the standard salary credit timeline?"
+    - "By which day of the month is the salary deposited?"
+  answer: |
+    Salaries are typically credited by the last working day of each month.
+
+- department: "HR"
+  questions:
+    - "Whom do I contact for salary issues?"
+    - "Who handles salary-related queries?"
+    - "Whom should I reach out to for payroll concerns?"
+    - "Who is the point of contact for salary discrepancies?"
+    - "Who do I email if there’s a problem with my salary?"
+  answer: |
+    Please raise your query with your respective State HR representative.
+
+- department: "HR"
+  questions:
+    - "How do I update my bank details?"
+    - "What’s the process to change my salary bank account?"
+    - "How can I edit or update my bank information?"
+    - "Where do I update my new bank account details?"
+    - "How do I change the account in which my salary is credited?"
+  answer: |
+    Submit a request to HR along with a cancelled cheque or a copy of your bank passbook. Ensure the update is completed before the 20th of the month.
+
+- department: "HR"
+  questions:
+    - "How do I apply for leave?"
+    - "What’s the procedure to apply for a leave of absence?"
+    - "How can I request leave in the HR portal?"
+    - "Where do I submit a leave application?"
+    - "What steps do I follow to raise a leave request?"
+  answer: |
+    Log in to Zing HR → Navigate to Leave → Select Apply Leave → Choose the leave type and date range → Submit for approval.
+
+- department: "HR"
+  questions:
+    - "How many leave types do I have?"
+    - "What types of leave are available to me?"
+    - "How many categories of leave can I apply for?"
+    - "What are the different kinds of leave in the system?"
+    - "Which leave types are part of our leave policy?"
+  answer: |
+    You are eligible for Privilege Leave, Maternity/Paternity Leave, and Bereavement Leave. For detailed information, please refer to the leave policy.
+
+- department: "HR"
+  questions:
+    - "What is the leave approval process?"
+    - "How is my leave application approved?"
+    - "Who needs to approve my leave?"
+    - "What steps are involved in getting my leave sanctioned?"
+    - "How does leave approval work?"
+  answer: |
+    Submit your request in Zing HR. Your manager will review and either approve or reject it within a few days.
+
+- department: "HR"
+  questions:
+    - "How can I check my leave balance?"
+    - "Where can I see how many leaves I have left?"
+    - "How do I find my leave entitlement?"
+    - "How do I check the remaining days of leave I can take?"
+    - "Where is my leave balance displayed in the system?"
+  answer: |
+    Go to the Leave tab in Zing HR to view your current leave balances.
+
+- department: "HR"
+  questions:
+    - "What is the official holiday list?"
+    - "Where can I view the company’s holiday calendar?"
+    - "What are the recognized public holidays this year?"
+    - "Is there a list of official holidays available?"
+    - "How can I know which days are considered company holidays?"
+  answer: |
+    The Holiday Calendar for 2025 is available on the HR portal. You may also request a location-specific copy from HR.
+
+- department: "HR"
+  questions:
+    - "How do I update my personal details in the HR system?"
+    - "Where can I edit my contact or personal information?"
+    - "How do I change my phone number or address in HR records?"
+    - "What’s the process to update personal details like email, address, etc.?"
+    - "How do I make corrections to my profile information?"
+  answer: |
+    Log in to Zing HR and navigate to the “Profile” section to update fields such as address, phone number, etc. Alternatively, you may contact HR for assistance with these updates.
+
+- department: "HR"
+  questions:
+    - "Whom do I contact for ID card issues?"
+    - "Who handles employee ID card problems?"
+    - "Who should I reach out to for a lost or damaged ID card?"
+    - "Where do I report issues related to my ID card?"
+    - "Who can assist with getting a new or replacement ID card?"
+  answer: |
+    Please contact the HR team for any issues related to your ID card or visiting card.
+
+- department: "HR"
+  questions:
+    - "When is my probation review?"
+    - "How do I know when my probation review is scheduled?"
+    - "What’s the timeline for probation assessment?"
+    - "When will my probation period be evaluated?"
+    - "Is there a date for my probation performance review?"
+  answer: |
+    Probation reviews are typically conducted at the end of three months. The process will be initiated by your manager or HR.
+
+- department: "HR"
+  questions:
+    - "How does the performance review process work?"
+    - "What are the steps in the performance appraisal cycle?"
+    - "How is employee performance evaluated?"
+    - "What happens during a performance review?"
+    - "What’s the company’s process for annual/quarterly appraisals?"
+  answer: |
+    You will first receive a self-review form, which will be followed by an evaluation from your manager. The ratings and feedback will then be discussed during a review meeting.
+
+- department: "HR"
+  questions:
+    - "How do I know my targets?"
+    - "Where can I find my performance goals?"
+    - "Who shares my KRAs or KPIs?"
+    - "How do I get information about my work targets?"
+    - "Where are my assigned targets or objectives documented?"
+  answer: |
+    Your immediate and skip-level supervisors will communicate your targets to you.
+
+- department: "HR"
+  questions:
+    - "What are the office timings?"
+    - "What is the daily working hour schedule?"
+    - "What time should I report to and leave the office?"
+    - "What are the official working hours?"
+    - "What is the start and end time of the office day?"
+  answer: |
+    Head Office: Monday to Friday, 9:30 AM – 6:30 PM
+    Branches: Monday to Friday, and 1st, 3rd, 4th, and 5th Saturdays, 9:30 AM – 5:30 PM
+
+- department: "HR"
+  questions:
+    - "Who do I contact for IT support?"
+    - "Whom should I reach out to for technical issues?"
+    - "Who helps with system or software problems?"
+    - "Who handles IT-related queries?"
+    - "Where do I raise an IT support ticket?"
+    - "IT related issue"
+  answer: |
+    Please email Suraj Kadam at suraj.kadam@saarathifinance.com.
+
+- department: "mCas"
+  questions:
+    - "Wrong Password"
+    - "Incorrect Password "
+    - "Login Issue"
+    - "login related issue"
+    - "login related issues"
+  answer: |
+    If you are unable to log in due to an incorrect password, please follow the steps below to reset it:
+    1. Open the mCAS Application.
+    2. Click on the “Forgot Password” link.
+    3. Enter your username.
+    4. Click on “Send OTP”.
+    5. You will receive an OTP on your official email ID.
+    6. Enter the OTP and set a new password.
+    7. You should now be able to log in successfully.
+
+- department: "mCas"
+  questions:
+    - "ID Locked"
+  answer: |
+    If your login ID is locked due to multiple incorrect attempts or system restrictions, please follow this step:
+    - Contact the system administrator or send an email to requesting account unlock assistance.
+    - Include your Employee Code / User ID and a brief explanation of the issue in the email.
+
+- department: "mCas"
+  questions:
+    - "Pincode Not Visible in the Search Bar"
+  answer: |
+    If the pincode field is not displaying or you’re unable to find a location:
+    1. Click on “Search by Pincode”, which appears above the country dropdown in the address section.
+    2. Enter the pincode first.
+    3. After entering the pincode, the city and state will auto-populate.
+    4. Then proceed to fill in the remaining address details.
+
+- department: "mCas"
+  questions:
+    - "Where to Pull Account Aggregator (AA) Report"
+    - "AA report issue"
+    - "AA report related issue"
+    - "AA issue"
+  answer: |
+    To initiate and complete the Account Aggregator (AA) process for a customer:
+    1. Go to the final page of the mCAS application, under “Check and Verification”.
+    2. Locate the Account Aggregator section.
+    3. Click on “Initiate”.
+    4. Enter the customer’s registered mobile number.
+    5. The customer will receive a prompt to complete the AA process via their mobile phone.
+    6. Once the process is complete, click on:
+      1. FI Report Status – to check if the financial data was successfully retrieved.
+      2. Analytics Status – to view the processed insights from the pulled data.
+
+- department: "mCas"
+  questions:
+    - "What Installment Due Date Should Be Selected?"
+    - "installment date issue"
+  answer: |
+    When selecting the installment due date for a customer during application:
+    - Always select the 5th of the month as the installment due date.
+    - This standardization helps ensure consistent EMI cycles across applications.
+
+- department: "mCas"
+  questions:
+    - "Where and How to Collect the Login/Processing Fee from the Customer"
+    - "login fee issue"
+    - "login fees issue"
+    - "processing fee issue"
+    - "processing fees issue"
+    - "processing fee issue"
+  answer: |
+    To collect the login/processing fee via the mCAS system:
+    1. Go to the “Applicant Information” section in the mCAS Application.
+    2. Click the arrow icon to expand the options.
+    3. Select the “+” (plus) button to add a Processing Fee entry.
+    4. Choose “Electronic Fund Transfer” as the payment method.
+    5. Tick the checkbox for “OTP for Payment Link”.
+    6. Enter the login fee amount.
+    7. Select the appropriate Sub Payment Type from the dropdown.
+    8. Upload a receipt if required or available.
+    9. Click on the three vertical dots on the generated payment link.
+    10. Choose either:
+        - “START PAYMENT (EMAIL)” to send an SMS link to the customer’s registered mobile number, or
+        - “LINK QR ONLY” to generate a QR code the customer can scan from your device.
+    11. Ask the customer to make the payment and share a screenshot for confirmation.
+    12. Once payment is made, click “Check Status” to validate the transaction within the system. 

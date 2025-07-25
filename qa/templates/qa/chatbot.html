@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Q&A Bot</title>
+    <style>
+        body {
+            background: #ece5dd;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .wa-container {
+            max-width: 420px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+        }
+        .wa-header {
+            background: #075e54;
+            color: #fff;
+            padding: 16px;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .wa-chatbox {
+            flex: 1;
+            padding: 20px 12px 20px 12px;
+            overflow-y: auto;
+            background: #ece5dd;
+            display: flex;
+            flex-direction: column;
+        }
+        .wa-message {
+            max-width: 75%;
+            margin-bottom: 12px;
+            padding: 10px 14px;
+            border-radius: 7.5px;
+            font-size: 1em;
+            line-height: 1.4;
+            word-break: break-word;
+            display: inline-block;
+            position: relative;
+        }
+        .wa-message.user {
+            align-self: flex-end;
+            background: #dcf8c6;
+            border-bottom-right-radius: 2px;
+        }
+        .wa-message.bot {
+            align-self: flex-start;
+            background: #fff;
+            border-bottom-left-radius: 2px;
+            border: 1px solid #e0e0e0;
+        }
+        .wa-footer {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #f7f7f7;
+            border-radius: 0 0 8px 8px;
+            border-top: 1px solid #ece5dd;
+        }
+        .wa-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1em;
+            outline: none;
+            background: #fff;
+            margin-right: 10px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+        .wa-send-btn {
+            background: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            font-size: 1.3em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .wa-send-btn:hover {
+            background: #20ba5a;
+        }
+        .wa-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .wa-btn {
+            background: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 22px;
+            font-size: 1em;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .wa-btn:hover {
+            background: #20ba5a;
+        }
+        .wa-query-btn {
+            background: #fff;
+            color: #075e54;
+            border: 2px solid #25d366;
+            border-radius: 22px;
+            padding: 10px 22px;
+            font-size: 1em;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .wa-query-btn:hover {
+            background: #e6f9f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wa-container">
+        <div class="wa-header">WhatsApp Q&amp;A Bot</div>
+        <div id="chatbox" class="wa-chatbox"></div>
+        <div class="wa-footer">
+            <input type="text" id="user-input" class="wa-input" placeholder="Type a message" autocomplete="off" />
+            <button id="send-btn" class="wa-send-btn">&#9658;</button>
+        </div>
+    </div>
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        // State for department/query selection
+        let currentDepartment = null;
+        let currentDeptQuestions = [];
+        let currentDeptStart = 0;
+        let currentDeptHasMore = false;
+
+        function formatAnswer(text) {
+            return text
+                .replace(/\n/g, '<br>')
+                .replace(/(\d+\. )/g, '<br>$1');
+        }
+
+        function appendMessage(sender, text, html=false) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'wa-message ' + sender;
+            if (html) {
+                msgDiv.innerHTML = text;
+            } else {
+                msgDiv.innerHTML = formatAnswer(text);
+            }
+            chatbox.appendChild(msgDiv);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function showDepartments() {
+            fetch('/departments/')
+                .then(res => res.json())
+                .then(data => {
+                    let html = '<div>Which department is your query regarding?</div><div class="wa-btn-group">';
+                    data.departments.forEach(dep => {
+                        html += `<button class="wa-btn" onclick="selectDepartment('${dep.replace(/'/g, "\\'")}')">${dep}</button>`;
+                    });
+                    html += '</div>';
+                    appendMessage('bot', html, true);
+                });
+        }
+
+        window.selectDepartment = function(department) {
+            currentDepartment = department;
+            currentDeptStart = 0;
+            fetchQuestionsForDepartment();
+        }
+
+        function fetchQuestionsForDepartment() {
+            fetch(`/department-questions/?department=${encodeURIComponent(currentDepartment)}&start=${currentDeptStart}&limit=5`)
+                .then(res => res.json())
+                .then(data => {
+                    currentDeptQuestions = data.questions;
+                    currentDeptHasMore = data.has_more;
+                    let html = `<div>Here are some common queries for <b>${currentDepartment}</b>:</div>`;
+                    data.questions.forEach(q => {
+                        html += `<button class="wa-query-btn" data-question="${encodeURIComponent(q)}">${q}</button>`;
+                    });
+                    if (currentDeptStart > 0) {
+                        html += `<button class="wa-query-btn" onclick="prevDeptQuestions()">Previous 5</button>`;
+                    }
+                    if (data.has_more) {
+                        html += `<button class="wa-query-btn" onclick="nextDeptQuestions()">Next 5</button>`;
+                    }
+                    updateOrAppendBotMessage(html);
+                });
+        }
+
+        // Helper to update the last bot message if it's a department question list, else append
+        function updateOrAppendBotMessage(html) {
+            // Find the last bot message
+            const botMessages = Array.from(document.querySelectorAll('.wa-message.bot'));
+            if (botMessages.length > 0) {
+                const last = botMessages[botMessages.length - 1];
+                // If it contains 'Here are some common queries for', update it
+                if (last.innerHTML.includes('Here are some common queries for')) {
+                    last.innerHTML = html;
+                    chatbox.scrollTop = chatbox.scrollHeight;
+                    return;
+                }
+            }
+            appendMessage('bot', html, true);
+        }
+
+        window.nextDeptQuestions = function() {
+            currentDeptStart += 5;
+            fetchQuestionsForDepartment();
+        }
+
+        window.prevDeptQuestions = function() {
+            currentDeptStart = Math.max(0, currentDeptStart - 5);
+            fetchQuestionsForDepartment();
+        }
+
+        function appendChooseDepartmentButton() {
+            const html = `<button class="wa-query-btn" style="font-weight:bold;" onclick="chooseDepartment()">Choose Department</button>`;
+            appendMessage('bot', html, true);
+        }
+
+        window.chooseDepartment = function() {
+            currentDepartment = null;
+            currentDeptStart = 0;
+            showDepartments();
+        }
+
+        function sendQuery(query, isDropdown = false) {
+            fetch('/query/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query, isDropdown })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.answer) {
+                    appendMessage('bot', data.answer);
+                } else if (data.answers) {
+                    appendMessage('bot', data.answers.join('\n---\n'));
+                } else if (data.error) {
+                    appendMessage('bot', 'Error: ' + data.error);
+                } else {
+                    appendMessage('bot', 'No answer found.');
+                }
+                // Always show the Choose Department button after any answer
+                appendChooseDepartmentButton();
+            })
+            .catch(() => {
+                appendMessage('bot', 'Error contacting server.');
+                appendChooseDepartmentButton();
+            });
+        }
+
+        function sendMessage() {
+            const query = userInput.value.trim();
+            if (!query) return;
+            appendMessage('user', query);
+            userInput.value = '';
+            sendQuery(query);
+        }
+
+        sendBtn.onclick = sendMessage;
+        userInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // On load, show department selection
+        showDepartments();
+
+        // Add event delegation for question buttons
+        chatbox.addEventListener('click', function(e) {
+            if (e.target.classList.contains('wa-query-btn') && e.target.dataset.question) {
+                const question = decodeURIComponent(e.target.dataset.question);
+                appendMessage('user', question);
+                sendQuery(question, true); // true for isDropdown
+            }
+        });
+    </script>
+</body>
+</html> 
